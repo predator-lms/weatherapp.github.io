@@ -13,7 +13,7 @@ const replaceVal = (tempVal, orgVal) =>{
     temperature = temperature.replace("{%weather%}", orgVal.weather[0].main);
 
     return temperature;
-}
+};
  const server= http.createServer((req, res) =>{
      if(req.url =="/"){
         requests("http://api.openweathermap.org/data/2.5/weather?q=noida&appid=129c247755e48d9a05bbaea98e54c8eb")
@@ -28,7 +28,6 @@ const replaceVal = (tempVal, orgVal) =>{
           if (err) return console.log('connection closed due to errors', err);
          
           console.log('end');
-          res.end();
         });
      }
 
